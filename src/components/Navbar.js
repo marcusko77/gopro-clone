@@ -26,7 +26,7 @@ class Navbar extends Component {
 
                 <div className='right-menu-container'>
                     <a href = { user.user_id ? process.env.REACT_APP_LOGOUT : process.env.REACT_APP_LOGIN }>{user.user_id ? <p>Logout</p> : <p>Login/Register</p>}</a>
-                    <a>Account</a>
+                    <a href = 'http://localhost:3000/#/account'>Account</a>
                     <p>US</p>
                     <div className='cart-display-container'>
                         <span>Cart icon</span>

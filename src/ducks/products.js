@@ -1,10 +1,12 @@
 import axios from 'axios'
 
 const initialState = {
-    products:[]
+    products:[],
+ 
 }
 
 const GET_PRODUCTS = 'GET_PRODUCTS'
+// const GET_PRODUCT = 'GET_PRODUCT'
 
 export function getProducts() {
     let cameraData = axios.get('/cameras').then( res => {
@@ -17,6 +19,17 @@ export function getProducts() {
     }
 }
 
+// export function getProductById(id) {
+//     let productData = axios.get(`/cameras/${id}`).then(res => {
+//         return res.data;
+//     })
+
+//     return {
+//         type: GET_PRODUCT,
+//         payload: productData
+//     }
+// }
+
 export default function reducer(state = initialState, action) {
     switch( action.type) {
         case GET_PRODUCTS + '_FULFILLED':
@@ -25,3 +38,4 @@ export default function reducer(state = initialState, action) {
             return state;
     }
 }
+

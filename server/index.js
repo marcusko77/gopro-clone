@@ -5,8 +5,8 @@ const express = require('express'),
      Auth0Strategy = require('passport-auth0'),
      massive = require('massive'),
      bodyParser = require('body-parser'),
-     productsController = require('./controllers/products_controller');
-
+     productsController = require('./controllers/products_controller'),
+    userController = require('./controllers/user_controller');
 
      
 
@@ -20,12 +20,15 @@ const {
     CONNECTION_STRING
 } = process.env
 
+
+
 massive(CONNECTION_STRING).then( db => {
     app.set( 'db', db);
 })
 
 
 const app = express();
+app.use(bodyParser.json())
 app.use(session({
     secret:'secret8979789',
     resave: false,
@@ -82,7 +85,19 @@ app.get('/auth/logout', (req, res) => {
     res.redirect('http://localhost:3000/')
 })
 
+//users
+
+app.get('/getuserinfo', userController.getUserInfo);
+app.put('/updateaddress', userController.updateAddress)
+
+//cameras
 app.get('/cameras', productsController.getAll);
+app.get('/cameras/:id', productsController.getOne);
+
+//cart
+
+// app.post( '/cart/:id', cartController.add)
+// app.delete( '/cart/:id', cartController.delete)
 
 
 app.listen( SERVER_PORT, () => {console.log(`Server listening on port ${SERVER_PORT}`)});

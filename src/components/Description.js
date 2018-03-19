@@ -1,0 +1,49 @@
+import React, { Component } from 'react'
+import { connect } from 'react-redux'
+import Navbar from './Navbar'
+import { getProducts } from '../ducks/products'
+
+ class Description extends Component {
+
+    componentDidMount() {
+        this.props.getProducts()
+    }
+
+
+    render() {
+
+        const product = this.props.products.filter(product => product.product_id == this.props.match.params.id);
+        console.log(product)
+
+        return(
+            <div>
+                <Navbar/>
+                <div className = 'product'>
+               { product.map(product => (
+                   <div> 
+             <h2>{product.product_name}</h2>
+               <h2>{product.price}</h2>
+               <p>{product.description}</p>
+                    <button>Add to Cart</button>
+                   </div>))}
+                </div>
+               
+               
+            </div>
+        )
+        
+               }
+}
+
+function mapStateToProps( {products} ) {
+    return {
+    
+       products:products.products
+    }
+}
+
+const mapDispatchToProps = {
+    getProducts
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Description)
