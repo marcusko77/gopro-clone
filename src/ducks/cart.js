@@ -4,21 +4,24 @@ import axios from 'axios'
 
 const initialState = {
    cart: [],
-   total:0
 }
 
 const ADD_TO_CART = 'ADD_TO_CART'
 const REMOVE_FROM_CART = 'REMOVE_FROM_CART'
+const GET_CART = 'GET_CART'
 
 
 
 export default function reducer(state = initialState, action) {
     switch( action.type) {
         case ADD_TO_CART + '_FULFILLED':
-        return Object.assign({}, state, {cart: action.payload.cart, total: action.payload.total});
+        return Object.assign({}, state, {cart: action.payload});
 
         case REMOVE_FROM_CART + '_FULFILLED':
-        return Object.assign({}, state, {cart: action.payload.cart, total: action.payload.total});
+        return Object.assign({}, state, {cart: action.payload});
+
+        case GET_CART + '_FULFILLED':
+        return Object.assign({}, state, {cart: action.payload})
 
         default:
             return state;
@@ -26,16 +29,29 @@ export default function reducer(state = initialState, action) {
 }
 
 export function addToCart( id ) {
+    
+    let cartData = axios.post(`/cart/${id}`, {id}).then( res => res.data)
+    console.log(cartData)
     return {
         type: ADD_TO_CART,
-        payload: axios.post(`/cart/${id}`).then( res => res.data)
+        payload: cartData
     };
 }
 
 export function removeFromCart( id ) {
     return {
         type: REMOVE_FROM_CART,
-        payload: axios.delete(`/cart/${id}`).then( res => res.data)
+        payload: axios.delete(`/delete/${id}`,{id}).then( res => res.data)
     }
+}
+export function getCart(){
+let cartData = axios.get('/cart').then( res => {
+    return res.data;
+})
+
+return {
+    type: GET_CART,
+    payload: cartData   
+}
 }
 

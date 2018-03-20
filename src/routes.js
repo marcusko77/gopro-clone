@@ -4,6 +4,7 @@ import Login from './components/Login'
 import Home from './components/Home'
 import Description from './components/Description'
 import Account from './components/Account'
+import Checkout from './components/Checkout'
 
 export default (
     <Switch>
@@ -11,6 +12,7 @@ export default (
         <Route path='/home' component={Home}/>
         <Route path='/description/:id' component={Description}/>
         <Route path='/account' component={Account}/>
+        <Route path='/checkout' component={Checkout}/>
         
      </Switch>         
 )

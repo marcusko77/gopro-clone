@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import Navbar from './Navbar'
 import { getProducts } from '../ducks/products'
+import { addToCart } from '../ducks/cart'
 
  class Description extends Component {
 
@@ -24,7 +25,7 @@ import { getProducts } from '../ducks/products'
              <h2>{product.product_name}</h2>
                <h2>{product.price}</h2>
                <p>{product.description}</p>
-                    <button>Add to Cart</button>
+                    <button onClick = {()=> this.props.addToCart(product.product_id)}>Add to Cart</button>
                    </div>))}
                 </div>
                
@@ -43,7 +44,8 @@ function mapStateToProps( {products} ) {
 }
 
 const mapDispatchToProps = {
-    getProducts
+    getProducts,
+    addToCart
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Description)

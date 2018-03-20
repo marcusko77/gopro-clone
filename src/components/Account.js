@@ -16,7 +16,8 @@ class Account extends Component {
 
     }
     componentDidMount() {
-        this.props.getUserInfo()
+        this.props.getUserInfo();
+        this.props.users.user[0] ? this.setState({newAddress:this.props.users.user[0].address }): null
     }
 
     edit( ) {
@@ -41,13 +42,13 @@ console.log(this.state)
 
                         {this.state.editting?
                         <div>
-                            <input placeholder = {this.props.users.user[0].address} onChange = { ( e ) => this.setState({newAddress: e.target.value})} />
+                            <input placeholder = {this.state.newAddress} onChange = { ( e ) => this.setState({newAddress: e.target.value})} />
                         <button onClick = {()=> this.edit()} >Save</button> 
                         </div>
                         :
                         <div>
 
-                        <p>Address: {this.props.users.user[0].address}</p> <button onClick = { () => this.setState( { editting: true})}>Update Address</button>
+                        <p>Address: {this.state.newAddress}</p> <button onClick = { () => this.setState( { editting: true})}>Update Address</button>
                         </div>}
                         </div>
 

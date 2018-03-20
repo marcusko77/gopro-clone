@@ -3,11 +3,15 @@ import { connect } from 'react-redux'
 import Navbar from './Navbar'
 import { getProducts } from '../ducks/products'
 import { Link } from 'react-router-dom'
+import { addToCart } from '../ducks/cart'
+import  Cart  from './Cart'
+import {  getUserInfo } from '../ducks/users'
 
 class Home extends Component {
 
     componentDidMount() {
         this.props.getProducts()
+        this.props.getUserInfo()
     }
 
     render() {
@@ -16,9 +20,11 @@ class Home extends Component {
         return (
             <div>
                 <Navbar />
+                {this.props.users.user[0] ? <Cart/> :null}
+                {/* {console.log(this.props.users.user[0])} */}
                 <h1>Home</h1>
                 <div className='products'>
-                {console.log(this.props.products)}
+                {/* {console.log(this.props.products)} */}
                     {   
                         this.props.products.map( products => (
                             <div className = 'product-list' key ={products.product_id} > 
@@ -26,7 +32,7 @@ class Home extends Component {
                                 <h2>{products.product_name}</h2>
                                 <h3>{products.price}</h3>
                                 <Link to= {`/description/${products.product_id}`}>Learn More</Link>
-                                <button>Add To Cart</button>
+                                <button onClick = {()=> this.props.addToCart(products.product_id)}>Add To Cart</button>
                                 {/* <img src = {products.imgurl[0]}/> */}
                             </div>
                         ))
@@ -38,15 +44,18 @@ class Home extends Component {
 
 }
 
-function mapStateToProps( {products} ) {
+function mapStateToProps( state ) {
+    console.log(state.users)
     return {
-    
-       products:products.products
+        users:state.users,
+       products:state.products.products
     }
 }
 
 const mapDispatchToProps = {
-    getProducts
+    getUserInfo,
+    getProducts,
+    addToCart
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home)

@@ -7,6 +7,7 @@ const express = require('express'),
      bodyParser = require('body-parser'),
      productsController = require('./controllers/products_controller'),
     userController = require('./controllers/user_controller');
+    cartController = require('./controllers/cart_controller')
 
      
 
@@ -96,8 +97,9 @@ app.get('/cameras/:id', productsController.getOne);
 
 //cart
 
-// app.post( '/cart/:id', cartController.add)
-// app.delete( '/cart/:id', cartController.delete)
+app.post( '/cart/:id', cartController.addToCart)
+app.get( '/cart', cartController.getCart)
+app.delete( '/delete/:id', cartController.removeFromCart)
 
 
 app.listen( SERVER_PORT, () => {console.log(`Server listening on port ${SERVER_PORT}`)});
