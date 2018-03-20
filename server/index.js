@@ -6,8 +6,10 @@ const express = require('express'),
      massive = require('massive'),
      bodyParser = require('body-parser'),
      productsController = require('./controllers/products_controller'),
-    userController = require('./controllers/user_controller');
-    cartController = require('./controllers/cart_controller')
+    userController = require('./controllers/user_controller'),
+    cartController = require('./controllers/cart_controller'),
+    stripeController= require('./controllers/stripe_controller'),
+     stripe = require('stripe')(process.env.STRIPE_PRIVATE_KEY);
 
      
 
@@ -100,6 +102,10 @@ app.get('/cameras/:id', productsController.getOne);
 app.post( '/cart/:id', cartController.addToCart)
 app.get( '/cart', cartController.getCart)
 app.delete( '/delete/:id', cartController.removeFromCart)
+
+//stripe
+
+app.post('/api/payment',stripeController.payment)
 
 
 app.listen( SERVER_PORT, () => {console.log(`Server listening on port ${SERVER_PORT}`)});

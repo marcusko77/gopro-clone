@@ -12,11 +12,6 @@ class Cart extends Component {
 
     }
 
-    componentWillReceiveProps(newProps) {
-        // if (this.props.cart !== newProps.cart) {
-        //     this.props.getCart()
-        // }
-    }
 
     calculatetotal(){
         if(this.props.cart.length>0) {

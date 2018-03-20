@@ -25,6 +25,7 @@ import { addToCart } from '../ducks/cart'
              <h2>{product.product_name}</h2>
                <h2>{product.price}</h2>
                <p>{product.description}</p>
+               <img src = {product.pictures[1]}/>
                     <button onClick = {()=> this.props.addToCart(product.product_id)}>Add to Cart</button>
                    </div>))}
                 </div>

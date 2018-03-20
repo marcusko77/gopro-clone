@@ -22,6 +22,7 @@ CREATE TABLE cart (
 );
 
 CREATE TABLE pictures (
+    position_id Integer,
     product_id INTEGER,
     imgurl TEXT
 )

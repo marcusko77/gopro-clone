@@ -26,14 +26,14 @@ class Home extends Component {
                 <div className='products'>
                 {/* {console.log(this.props.products)} */}
                     {   
-                        this.props.products.map( products => (
+                        this.props.products.reverse().map( products => (
                             <div className = 'product-list' key ={products.product_id} > 
                                 <h1> {products.phrase}</h1>
                                 <h2>{products.product_name}</h2>
                                 <h3>{products.price}</h3>
                                 <Link to= {`/description/${products.product_id}`}>Learn More</Link>
                                 <button onClick = {()=> this.props.addToCart(products.product_id)}>Add To Cart</button>
-                                {/* <img src = {products.imgurl[0]}/> */}
+                                <img src = {products.pictures[0]}/>
                             </div>
                         ))
                     }
