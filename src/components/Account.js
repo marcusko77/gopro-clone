@@ -4,7 +4,7 @@ import Navbar from './Navbar'
 import {  getUserInfo } from '../ducks/users'
 import { Link } from 'react-router-dom'
 import { updateAddress } from '../ducks/users'
-
+import '../styles/main.scss'
 class Account extends Component {
     constructor(props){
         super(props)
@@ -32,11 +32,12 @@ console.log(this.state)
         return (
             <div>
                 <Navbar/>
-                <div>
+                <div className = 'account'>
                     
-                    <h1>Account Information</h1>
+                   
                     {this.props.users.user[0] ?
-                        <div>
+                        <div className = 'account-info'>
+                         <h1>Account Information</h1>
                         <p>First Name: {this.props.users.user[0].first_name}</p>   
                         <p>Last Name: {this.props.users.user[0].last_name}</p>   
 

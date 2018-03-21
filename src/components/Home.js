@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import { addToCart } from '../ducks/cart'
 import  Cart  from './Cart'
 import {  getUserInfo } from '../ducks/users'
+import '../styles/main.scss'
 
 class Home extends Component {
 
@@ -22,18 +23,20 @@ class Home extends Component {
                 <Navbar />
                 {this.props.users.user[0] ? <Cart/> :null}
                 {/* {console.log(this.props.users.user[0])} */}
-                <h1>Home</h1>
                 <div className='products'>
                 {/* {console.log(this.props.products)} */}
                     {   
                         this.props.products.reverse().map( products => (
-                            <div className = 'product-list' key ={products.product_id} > 
+                            <div   className = 'product-list' key ={products.product_id} > 
+                            
+                            {/* <img src = {products.pictures[0]}/> */}
+                            <div style= {{backgroundImage:`url(${products.pictures[0]})}`}} className='product-info'>
                                 <h1> {products.phrase}</h1>
                                 <h2>{products.product_name}</h2>
                                 <h3>{products.price}</h3>
                                 <Link to= {`/description/${products.product_id}`}>Learn More</Link>
                                 <button onClick = {()=> this.props.addToCart(products.product_id)}>Add To Cart</button>
-                                <img src = {products.pictures[0]}/>
+                                </div>
                             </div>
                         ))
                     }

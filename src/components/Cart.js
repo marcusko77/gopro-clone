@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { getCart } from '../ducks/cart'
 import './Cart.css'
+import '../styles/main.scss'
 
 class Cart extends Component {
 

@@ -3,6 +3,7 @@ import { connect } from 'react-redux'
 import Navbar from './Navbar'
 import { getProducts } from '../ducks/products'
 import { addToCart } from '../ducks/cart'
+import '../styles/main.scss'
 
  class Description extends Component {
 

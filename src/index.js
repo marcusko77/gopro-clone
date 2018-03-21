@@ -5,7 +5,9 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import {Provider} from 'react-redux';
 import {HashRouter} from 'react-router-dom';
-import store from './store'
+import store from './store';
+import './styles/main.css'
+
 
 
 

@@ -9,7 +9,10 @@
     "dotenv": "^5.0.1",
     "express": "^4.16.2",
     "express-session": "^1.15.6",
+    "json": "^9.0.6",
     "massive": "^4.7.0",
+    "node-sass-chokidar": "^1.2.0",
+    "npm-run-all": "^4.1.2",
     "passport": "^0.4.0",
     "passport-auth0": "^0.6.1",
     "react": "^16.2.0",
@@ -24,11 +27,16 @@
     "stripe": "^5.5.0"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "build-css": "node-sass-chokidar src/ -o src/",
+  "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive",
+  "start-js": "react-scripts start",
+  "start": "npm-run-all -p watch-css start-js",
+  "build": "npm run build-css && react-scripts build",
+  "test": "react-scripts test --env=jsdom",
+  "eject": "react-scripts eject"
   },
   "main": "server/index.js",
-  "proxy": "http://localhost:3005"
+  "proxy": "http://localhost:3005",
+  "build-css": "node-sass-chokidar src/ -o src/",
+  "watch-css": "npm run build-css && node-sass-chokidar src/ -o src/ --watch --recursive"
 }

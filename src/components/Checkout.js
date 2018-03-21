@@ -6,6 +6,9 @@ import { connect } from 'react-redux'
 import { Elements } from 'react-stripe-elements'
 import StripeCheckout from 'react-stripe-checkout'
 import axios from 'axios'
+import '../styles/main.scss'
+
+
 class Checkout extends Component {
 
     componentDidMount() {

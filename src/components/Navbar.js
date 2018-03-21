@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getUser } from './../ducks/users';
 import './Navbar.css'
+
+
 class Navbar extends Component {
     componentDidMount(){
         this.props.getUser();
