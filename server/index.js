@@ -62,6 +62,8 @@ passport.use( new Auth0Strategy({
     })
 }))
 
+
+
 passport.serializeUser( (id, done) =>{
     done(null, id)
 })
@@ -74,8 +76,8 @@ passport.deserializeUser( (id, done) => {
 
 app.get('/auth', passport.authenticate('auth0'));
 app.get('/auth/callback', passport.authenticate('auth0', {
-    successRedirect: 'http://localhost:3000/#/home',
-    failureRedirect: 'http://localhost:3000',
+    successRedirect: '/#/home',
+    failureRedirect: '/',
 }))
 
 app.get('/auth/me', (req, res) => {
@@ -89,7 +91,7 @@ app.get('/auth/me', (req, res) => {
 
 app.get('/auth/logout', (req, res) => {
     req.logOut();
-    res.redirect('http://localhost:3000/')
+    res.redirect('/')
 })
 
 //users

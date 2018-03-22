@@ -1,0 +1,15 @@
+REACT_APP_LOGIN = /auth
+REACT_APP_LOGOUT = /auth/logout
+
+SERVER_PORT = 3005
+SESSION_SECRET = secret1289389
+DOMAIN =marcus-ko.auth0.com
+CLIENT_ID =Poq9QC0bJG1bxxgWDGezie8ReuKsn0Cv
+CLIENT_SECRET =lEf4stIG-KFHA3_09Rcxfq4sqUkF2pj5veDYN-Bj0slTxPsELZRmUY2laCV5a9KW
+CALLBACK_URL = /auth/callback
+CONNECTION_STRING =postgres://iktytvvljaqqqn:69734872592849152dddab8d037543f3ba7a3df074cb13d5f6722afc48b6d99d@ec2-50-17-206-214.compute-1.amazonaws.com:5432/daa8n8ct3jbj4r?ssl=true
+REACT_APP_STRIPE_PUBLIC_KEY =pk_test_oxuMGo3MknG7e550KhbXiKiX
+STRIPE_PRIVATE_KEY = sk_test_VOPnT3eHIrvYDxjQ296J1piL
+
+REACT_APP_HOMEPAGE = /#/home
+REACT_APP_ACCOUNT = /#/account
