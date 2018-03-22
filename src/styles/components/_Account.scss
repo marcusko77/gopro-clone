@@ -6,13 +6,30 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 75px;
 
 }
 
 .account-info {
-    background-color:ghostwhite;
+    color:black;
+    background-color:#00b8fd;
     border-radius:30px;
     width:500px;
     height:300px;
     margin-bottom:30vh;
+
+
+    button {
+        background: white;
+    color:black;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 8px;
+    height: 30px;
+    width:  100px;
+    font-family: 'ProximaNova', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .075em;
+    }
 }

@@ -4,6 +4,7 @@ import { getCart } from '../ducks/cart'
 import { removeFromCart } from '../ducks/cart'
 import { connect } from 'react-redux'
 import { Elements } from 'react-stripe-elements'
+import { Link } from 'react-router-dom'
 import StripeCheckout from 'react-stripe-checkout'
 import axios from 'axios'
 import '../styles/main.scss'
@@ -59,8 +60,8 @@ class Checkout extends Component {
                     <StripeCheckout
                         token={this.onToken}
                         stripeKey='pk_test_oxuMGo3MknG7e550KhbXiKiX'
-                        amount={this.calculatetotal()*100}
-                    />
+                        amount={this.calculatetotal()*100}/>
+                    <Link to='/home'>Continue Shopping</Link>
                 </div>
             </div>
         )

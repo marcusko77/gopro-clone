@@ -1,0 +1,36 @@
+.login {
+    background-image: url('https://thumbnails-02.gp-static.com/v1/thumbnails/unsafe/776x443/channels-uploads/production/images/master/4211/2decd-36378024.jpg');
+    background-size:cover;
+    height:100vh;
+    width:100%;
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: space-around;
+    
+
+
+    button {
+    background: #00b8fd;
+    color:white;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 8px;
+    margin-bottom:200px;
+    height: 50px;
+    width: 180px;
+    padding: 10px 30px;
+    font-family: 'ProximaNova', Arial, sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: .075em;
+    border-color:black;
+    border-width: 2px;
+    }
+
+    img {
+    width:400px;
+    height:100px;
+    }
+
+}

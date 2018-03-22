@@ -33,10 +33,10 @@ console.log(this.state)
             <div>
                 <Navbar/>
                 <div className = 'account'>
-                    
+                    <div className = 'account-info'>
                    
                     {this.props.users.user[0] ?
-                        <div className = 'account-info'>
+                        <div  >
                          <h1>Account Information</h1>
                         <p>First Name: {this.props.users.user[0].first_name}</p>   
                         <p>Last Name: {this.props.users.user[0].last_name}</p>   
@@ -52,8 +52,8 @@ console.log(this.state)
                         <p>Address: {this.state.newAddress}</p> <button onClick = { () => this.setState( { editting: true})}>Update Address</button>
                         </div>}
                         </div>
-
                         :<p>Please Login to View Account Information </p>}
+                            </div>
                 </div>
             </div>
         )
