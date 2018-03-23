@@ -8,6 +8,7 @@
     position: fixed;
     width: 100vw;
     top: 0;
+    z-index: 1000;
 
     .nav-sides-container {
         max-width: 1200px;
@@ -18,7 +19,7 @@
         font-family: sans-serif;
         font-style: normal;
         font-weight: 100;
-        z-index: 1000;
+        z-index: 1003;
     }
     
 }
@@ -38,11 +39,8 @@
 }
 
 .cart-display-container {
-    -webkit-box-align: center;
-    -ms-flex-align: center;
+   
     align-items: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
 
     img {

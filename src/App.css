@@ -24,8 +24,5 @@
     transform: rotate(360deg); } }
 
 a {
-  text-decoration: none; }
-
-a:visited {
-  style: none;
+  text-decoration: none;
   color: white; }

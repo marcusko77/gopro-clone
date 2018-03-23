@@ -31,12 +31,14 @@ class Home extends Component {
                             
                             {/* <img src = {products.pictures[0]}/> */}
                             <div style= {{backgroundImage:`url(${products.pictures[0]})`}} className='product-info'>
+                                <div className = 'content'>
                                 <h1> {products.phrase}</h1>
                                 <h2>{products.product_name}</h2>
-                                <h3>{products.price}</h3>
+                                <h3>${products.price}</h3>
                                 <button  onClick = {()=> this.props.addToCart(products.product_id)}>Add To Cart</button>
                                 <Link to= {`/description/${products.product_id}`}><button className = 'learn-more'>Learn More</button></Link>
-                                </div>
+                               </div>
+                                </div>  
                             </div>
                         ))
                     }

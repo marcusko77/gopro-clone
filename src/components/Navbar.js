@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { getUser } from './../ducks/users';
+import {Link} from 'react-router-dom'
 import Cart from './Cart'
 import './Navbar.css'
 
@@ -16,10 +17,11 @@ class Navbar extends Component {
             <div className='nav-container'>
             <div className = 'nav-sides-container'>
                 <div className='left-menu-container'>
-                    <a href={process.env.REACT_APP_HOMEPAGE}>
+                    {/* <a href={process.env.REACT_APP_HOMEPAGE}> */}
+                    <Link to= '/home'>
                         <div className='main-logo'>
                         </div>
-                    </a>
+                    </Link>
                     <div className='dead-menu-links'>
                         <p>SHOP</p>
                         <p>APPS</p>
@@ -30,7 +32,7 @@ class Navbar extends Component {
 
                 <div className='right-menu-container'>
                     <a href = { user[0] ? process.env.REACT_APP_LOGOUT : process.env.REACT_APP_LOGIN }>{user[0] ? <p>Logout</p> : <p>Login/Register</p>}</a>
-                    <a href = {process.env.REACT_APP_ACCOUNT}>Account</a>
+                    <Link to = '/account'>Account</Link>
                     <p>US</p>
                     <div className='cart-display-container'>
                         <img src="https://www.bookstore.umn.edu/images/icons/cart2.png" alt=""/>

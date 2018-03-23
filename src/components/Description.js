@@ -25,11 +25,13 @@ import '../styles/main.scss'
                 <div className = 'product'>
                { product.map(product => (
                    <div className = 'camera' style = {{backgroundImage:`url(${product.pictures[1]})`}}> 
-             <h2>{product.product_name}</h2>
-               <h2>{product.price}</h2>
+                   <div className = 'products'>
+             <h1>{product.product_name}</h1>
+               <h1 className ='price'>${product.price}</h1>
                <p>{product.description}</p>
                {/* <img src = {product.pictures[1]}/> */}
                     <button onClick = {()=> this.props.addToCart(product.product_id)}>Add to Cart</button>
+                    </div>
                    </div>))}
                 </div>
                

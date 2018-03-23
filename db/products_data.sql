@@ -9,9 +9,9 @@ images
 INSERT INTO PICTURES (product_id, imgurl) values(1, 'https://shop.gopro.com/on/demandware.static/-/Library-Sites-sharedGoProLibrary/default/dwcc34516b/images/camera-landing-page/Hero6_launch/GoPro_CLP_Hero6Black_Desktop.jpg');
 INSERT INTO PICTURES (product_id, imgurl) values(2, 'https://shop.gopro.com/on/demandware.static/-/Library-Sites-sharedGoProLibrary/default/dw6e77f652/images/camera-landing-page/Hero6_launch/GoPro_CLP_Hero5Black_Desktop.jpg');
 INSERT INTO PICTURES (product_id, imgurl) values(3, 'https://shop.gopro.com/on/demandware.static/-/Library-Sites-sharedGoProLibrary/default/dw7779a58e/images/camera-landing-page/Hero6_launch/GoPro_CLP_Hero5Session_Desktop.jpg');
-INSERT INTO PICTURES (product_id, imgurl) values(4, 'https://shop.gopro.com/on/demandware.static/-/Library-Sites-sharedGoProLibrary/default/dw1748da34/images/camera-landing-page/GoPro_CLP_Fusion_M.jpg');
+INSERT INTO PICTURES (product_id, imgurl) values(4, 'https://shop.gopro.com/on/demandware.static/-/Library-Sites-sharedGoProLibrary/default/dwbdfcbfd5/images/camera-landing-page/GoPro_CLP_Fusion_D.jpg');
 
-INSERT INTO PICTURES (product_id, imgurl) values(1, 'https://shop.gopro.com/on/demandware.static/-/Sites-gopro-products/default/dw51620b03/hero5launch/01_GoPro_Hero5Black_Buy_Carousel1_Desktop.jpg');
+INSERT INTO PICTURES (product_id, imgurl) values(1, 'https://shop.gopro.com/on/demandware.static/-/Sites-gopro-products/default/dwb79c34ea/hero6launch/01_GoPro_Hero6Black_Buy_Carousel2_Desktop.jpg');
 INSERT INTO PICTURES (product_id, imgurl) values(2, 'https://shop.gopro.com/on/demandware.static/-/Sites-gopro-products/default/dw51620b03/hero5launch/01_GoPro_Hero5Black_Buy_Carousel1_Desktop.jpg');
 INSERT INTO PICTURES (product_id, imgurl) values(3, 'https://shop.gopro.com/on/demandware.static/-/Sites-gopro-products/default/dwec56be9b/hero5launch/01_GoPro_Hero5Session_Buy_Carousel1_Desktop.jpg');
 INSERT INTO PICTURES (product_id, imgurl) values(4, 'https://shop.gopro.com/on/demandware.static/-/Sites-gopro-products/default/dw957d318e/fusionlaunch/01_GoPro_Fusion_Buy_Carousel1_Desktop.jpg')

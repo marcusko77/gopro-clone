@@ -14,6 +14,7 @@ const express = require('express'),
      
 
 const {
+    REACT_APP_SUCCESS,
     SERVER_PORT,
     SESSION_SECRET,
     DOMAIN,
@@ -76,7 +77,7 @@ passport.deserializeUser( (id, done) => {
 
 app.get('/auth', passport.authenticate('auth0'));
 app.get('/auth/callback', passport.authenticate('auth0', {
-    successRedirect: '/#/home',
+    successRedirect: REACT_APP_SUCCESS,
     failureRedirect: '/',
 }))
 

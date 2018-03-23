@@ -1,0 +1,15 @@
+.checkout {
+    padding-top:75px;
+}
+
+.checkout-product {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+
+
+    button {
+        border:none;
+        cursor: pointer;
+    }
+}

@@ -22,7 +22,7 @@ class Checkout extends Component {
         if (this.props.cart.length > 0) {
             return this.props.cart.reduce((acc, item) => {
                 return acc + item.price
-            }, 0)
+            }, 0).toFixed(2)
 
         }
     }
@@ -33,6 +33,7 @@ class Checkout extends Component {
         const { amount } = this.calculatetotal()
         axios.post('/api/payment', { token, amount })
           .then(charge => { console.log('charge response', charge.data) });
+
       }
 
 
@@ -43,11 +44,12 @@ class Checkout extends Component {
         return (
             <div>
                 <Navbar />
-                <h1>Checkout!</h1>
-                <div>
+                
+                <div className='checkout'>
+                <h1>Shopping Cart</h1>
                     {cart.length > 0 ?
                         cart.map(product => (
-                            <div key={product.product_id}>
+                            <div key={product.product_id} className = 'checkout-product'>
                                 <p>{product.product_name}</p>
                                 <p>Price:{product.price}</p>
                                 <p>Quantity:{product.quantity}</p>
