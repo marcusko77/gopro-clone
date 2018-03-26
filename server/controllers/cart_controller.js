@@ -29,6 +29,14 @@ module.exports = {
         .catch( () => res.status(500).send() );
 
         
+    },
+
+    clearCart:(req, res, next) => {
+        const db = req.app.get('db');
+        const  userId = req.user.user_id;
+        db.clear_cart(userId)
+            .then((cart) => res.status(200).send(cart))
+           .catch(() => res.status(500).send());
     }
 
 }

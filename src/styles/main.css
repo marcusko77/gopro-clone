@@ -8,9 +8,12 @@
   position: fixed;
   width: 100vw;
   top: 0;
-  z-index: 1000; }
+  z-index: 1000;
+  font-size: 14px; }
   .nav-container .nav-sides-container {
     max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
     color: white;
     display: flex;
     justify-content: space-between;
@@ -18,7 +21,8 @@
     font-family: sans-serif;
     font-style: normal;
     font-weight: 100;
-    z-index: 1003; }
+    z-index: 1003;
+    box-sizing: border-box; }
 
 .left-menu-container {
   display: flex;
@@ -30,7 +34,7 @@
   display: flex;
   align-items: center;
   justify-content: space-around;
-  width: 500px; }
+  width: 400px; }
 
 .cart-display-container {
   align-items: center;
@@ -47,6 +51,9 @@
   align-items: center;
   width: 300px;
   height: 75px; }
+
+p {
+  cursor: pointer; }
 
 .main-logo {
   background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0iR29Qcm9fTG9nbyIgZGF0YS1uYW1lPSJHb1BybyBMb2dvIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzNDkuOTEgMTEwLjQyIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzAwOWZkZjt9LmNscy0ze2ZpbGw6IzAwNWRhYzt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPkdvUHJvX0xvZ29fNENfUmV2ZXJzZWRfbm9SX1JHQjwvdGl0bGU+PGcgaWQ9IlIiPjxwYXRoIGNsYXNzPSJjbHMtMSIgZD0iTTI1OC4yLDE5MS41MWMxNS41LDAsMjMuMjUtNCwyMy4yNS0xMi4yVjE2NS40MWMwLTguMTktNy43NS0xMi4yLTIzLjI1LTEyLjJIMjM5LjU4Yy0xNS41LDAtMjMuMjUsNC0yMy4yNSwxMi4ydjEzLjkxYzAsOC4xOSw3Ljc1LDEyLjIsMjMuMjUsMTIuMlptMC03LjEySDIzOS41OGMtOC42NywwLTEyLjc4LTEuNDktMTIuNzgtNC41MnYtMTVjMC0zLDQuMTEtNC41MSwxMi43OC00LjUxSDI1OC4yYzguNjcsMCwxMi43OCwxLjQ5LDEyLjc4LDQuNTF2MTVjMCwzLTQuMTEsNC41Mi0xMi43OCw0LjUyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTMwLjkyIC0xNDIuNzkpIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNNDU3LjU4LDE5MS41MWMxNS41LDAsMjMuMjUtNCwyMy4yNS0xMi4xOVYxNjUuNDFjMC04LjE5LTcuNzUtMTIuMi0yMy4yNS0xMi4ySDQzOWMtMTUuNSwwLTIzLjI1LDQtMjMuMjUsMTIuMnYxMy45MWMwLDguMTksNy43NSwxMi4xOSwyMy4yNSwxMi4xOVptMC03LjEySDQzOWMtOC42NywwLTEyLjc4LTEuNDktMTIuNzgtNC41MnYtMTVjMC0zLDQuMTEtNC41MSwxMi43OC00LjUxaDE4LjYxYzguNjcsMCwxMi43OCwxLjQ5LDEyLjc4LDQuNTF2MTVjMCwzLTQuMTEsNC41Mi0xMi43OCw0LjUyIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTMwLjkyIC0xNDIuNzkpIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMjA1LjYxLDE3OS4xNHYtOS42MmMwLTIuMDgtMS4yOC0zLTMuODctM0gxNzlhMy45LDMuOSwwLDAsMCwwLDcuNzloMTUuNTJ2NS4xN2MwLDEuNTUtMiwzLjA1LTUuNCw0YTI2LjMxLDI2LjMxLDAsMCwxLTcuMy43OWgtMjVxLTE0LjkzLDAtMTQuOTQtNC45NVYxNTQuODNjMC0zLjI5LDUuOTUtNC44MiwxNy44My00LjgyaDdxNCwwLDQtMy42MnQtNC0zLjZoLTEwYTUwLjcyLDUwLjcyLDAsMCwwLTE2LjQ4LDIuMzZjLTUuNjEsMS45My05LjQ1LDUuMzItOS40NSw5LjdWMTc5LjNxMCw2LjgzLDkuMjYsOS45M2E1Mi4yNyw1Mi4yNywwLDAsMCwxNi41OCwyLjI4aDI1LjA4QTQyLjQxLDQyLjQxLDAsMCwwLDE5Ny40LDE4OVEyMDUuNjEsMTg1Ljc2LDIwNS42MSwxNzkuMTRaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTMwLjkyIC0xNDIuNzkpIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNMzU4LjM4LDE0NC44NGE1Niw1NiwwLDAsMC0xNS45NC0ySDI5NS41MmEzLjE1LDMuMTUsMCwwLDAtMy4xNSwzLjE1djQyLjM4YzAsMi4xMywxLjMzLDMuMTksMy44OCwzLjE5aDMuMjhjMi41NSwwLDMuODgtMS4wNiwzLjg4LTMuMTlWMTc0LjA2aDM5YTUxLDUxLDAsMCwwLDE2LjQ1LTIuMjhjNi0yLjIyLDkuMS01Ljc0LDkuMS0xMC41N1YxNTMuNkMzNjgsMTQ5Ljc1LDM2NC44MiwxNDYuOCwzNTguMzgsMTQ0Ljg0Wm0tMS40MywxNi45NGMwLDMuOTMtNC45LDUuMDctMTQuNTEsNS4wN2gtMzlWMTUwaDM5YzkuNjEsMCwxNC41MSwxLjE0LDE0LjUxLDUuMDdaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMTMwLjkyIC0xNDIuNzkpIi8+PHBhdGggY2xhc3M9ImNscy0xIiBkPSJNNDA0LjUzLDE1My4yYy05LjYzLDAtMTMuNy0uMTgtMTkuNDEsMi4xNi01LjM2LDIuMi03LjY1LDYuMDctNy42NSw5LjYzdjIzLjQ3YzAsMiwxLjI2LDMsMy42OSwzaDMuMTNjMi40MywwLDMuNjktMSwzLjY5LTNWMTY1YzAtMy4yOCw0LjA2LTQuNjcsMTIuMTItNC42N2g0LjVjMi42MywwLDMuODgtMS4yLDMuODgtMy41NnMtMS4zMi0zLjU2LTQtMy41NiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTEzMC45MiAtMTQyLjc5KSIvPjxyZWN0IGNsYXNzPSJjbHMtMiIgeT0iNjAuNzIiIHdpZHRoPSI3NS45MiIgaGVpZ2h0PSI0OS43Ii8+PHJlY3QgY2xhc3M9ImNscy0yIiB4PSI5MS4zMyIgeT0iNjAuNzIiIHdpZHRoPSI3NS45MiIgaGVpZ2h0PSI0OS43Ii8+PHJlY3QgY2xhc3M9ImNscy0zIiB4PSIxODIuNjYiIHk9IjYwLjcyIiB3aWR0aD0iNzUuOTIiIGhlaWdodD0iNDkuNyIvPjxyZWN0IGNsYXNzPSJjbHMtMSIgeD0iMjczLjk4IiB5PSI2MC43MiIgd2lkdGg9Ijc1LjkyIiBoZWlnaHQ9IjQ5LjciLz48L2c+PC9zdmc+DQo=");
@@ -155,7 +162,8 @@
     font-size: 12px;
     letter-spacing: .075em;
     border-color: black;
-    border-width: 2px; }
+    border-width: 2px;
+    cursor: pointer; }
   .login img {
     width: 400px;
     height: 100px; }
@@ -291,31 +299,31 @@
   background-image: url("https://shop.gopro.com/on/demandware.static/-/Library-Sites-sharedGoProLibrary/default/dweb59d954/images/camera-landing-page/Hero6_launch/GoPro_CLP_GoProApp_Desktop.jpg");
   background-size: cover;
   height: 100vh;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-top: 75px; }
+  width: 100%; }
 
 .account-info {
-  color: black;
-  background-color: #00b8fd;
-  border-radius: 30px;
-  width: 500px;
-  height: 300px;
-  margin-bottom: 30vh; }
+  padding-top: 75px;
+  margin: 0 25%;
+  padding: 5%;
+  background-color: white;
+  border-radius: 50px; }
+  .account-info h1 {
+    border-bottom: 1px solid #666; }
   .account-info button {
-    background: white;
-    color: black;
+    background: #00b8fd;
+    color: white;
     display: inline-block;
     vertical-align: middle;
     margin: 8px;
-    height: 30px;
-    width: 100px;
+    height: 50px;
+    width: 140px;
+    padding: 10px 30px;
     font-family: 'ProximaNova', Arial, sans-serif;
     font-weight: 700;
     font-size: 12px;
-    letter-spacing: .075em; }
+    letter-spacing: .075em;
+    text-transform: uppercase;
+    cursor: pointer; }
 
 .checkout-background {
   background-image: url("https://thumbnails-04.gp-static.com/v1/thumbnails/unsafe/776x443/channels-uploads/production/images/master/4208/857fb-36377030.jpg");
@@ -353,7 +361,8 @@
     display: flex;
     justify-content: space-around;
     margin-top: 50px;
-    align-items: center; }
+    align-items: center;
+    border-bottom: 1px solid #666; }
     .checkout .total .stripe {
       height: 30px; }
   .checkout a {

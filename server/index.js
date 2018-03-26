@@ -109,6 +109,7 @@ app.get('/cameras/:id', productsController.getOne);
 app.post( '/cart/:id', cartController.addToCart)
 app.get( '/cart', cartController.getCart)
 app.delete( '/delete/:id', cartController.removeFromCart)
+app.delete('/clearcart', cartController.clearCart)
 
 //stripe
 

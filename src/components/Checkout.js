@@ -2,6 +2,8 @@ import React, { Component } from 'react'
 import Navbar from './Navbar'
 import { getCart } from '../ducks/cart'
 import { removeFromCart } from '../ducks/cart'
+import {getUserInfo } from '../ducks/users'
+import {clearCart } from '../ducks/cart'
 import { connect } from 'react-redux'
 import { Elements } from 'react-stripe-elements'
 import { Link } from 'react-router-dom'
@@ -14,6 +16,7 @@ class Checkout extends Component {
 
     componentDidMount() {
         this.props.getCart();
+        this.props.getUserInfo();
 
     }
 
@@ -27,12 +30,15 @@ class Checkout extends Component {
         }
     }
 
+
+
     onToken = token => {
         console.log('token', token);
         token.card = void 0;
         const { amount } = this.calculatetotal()
+        this.props.clearCart();
         axios.post('/api/payment', { token, amount })
-          .then(charge => { console.log('charge response', charge.data) });
+          .then(charge => { console.log('charge response', charge.data)});
 
       }
 
@@ -76,17 +82,20 @@ class Checkout extends Component {
     }
 }
 
-function mapStateToProps({ cart }) {
-    console.log(cart.cart)
+function mapStateToProps( state ) {
+    // console.log(cart.cart)
     return {
-        cart: cart.cart
+        cart: state.cart.cart,
+        user: state.users.user
 
     }
 }
 
 const mapDispatchToProps = {
     getCart,
-    removeFromCart
+    removeFromCart,
+    getUserInfo,
+    clearCart
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Checkout)

@@ -56,6 +56,7 @@ class Navbar extends Component {
                 </div>
 
                 <div className='right-menu-container'>
+                {/* {console.log(user[0])} */}
                     <a href = { user[0] ? process.env.REACT_APP_LOGOUT : process.env.REACT_APP_LOGIN }>{user[0] ? <p>Logout</p> : <p>Login/Register</p>}</a>
                     <Link to = '/account'>Account</Link>
                     <p>US</p>
