@@ -15,9 +15,11 @@ class Home extends Component {
         this.props.getUserInfo()
     }
 
+    
+
     render() {
     
-    
+    const user = this.props.user;
         return (
             <div>
                 <Navbar />
@@ -35,7 +37,7 @@ class Home extends Component {
                                 <h1> {products.phrase}</h1>
                                 <h2>{products.product_name}</h2>
                                 <h3>${products.price}</h3>
-                                <button  onClick = {()=> this.props.addToCart(products.product_id)}>Add To Cart</button>
+                                <button  onClick = {() =>  this.props.user[0]?this.props.addToCart(products.product_id): alert('please login to add items to cart')}>Add To Cart</button>
                                 <Link to= {`/description/${products.product_id}`}><button className = 'learn-more'>Learn More</button></Link>
                                </div>
                                 </div>  
@@ -52,7 +54,7 @@ class Home extends Component {
 function mapStateToProps( state ) {
     // console.log(state.products)
     return {
-        users:state.users,
+        user:state.users.user,
        products:state.products.products
     }
 }

@@ -30,7 +30,7 @@ import '../styles/main.scss'
                <h1 className ='price'>${product.price}</h1>
                <p>{product.description}</p>
                {/* <img src = {product.pictures[1]}/> */}
-                    <button onClick = {()=> this.props.addToCart(product.product_id)}>Add to Cart</button>
+                    <button onClick = {()=> this.props.user[0]?this.props.addToCart(product.product_id): alert('please login to add items to cart')}>Add to Cart</button>
                     </div>
                    </div>))}
                 </div>
@@ -45,7 +45,7 @@ import '../styles/main.scss'
 function mapStateToProps( state ) {
     console.log(state)
     return {
-        users:state.users,
+        user:state.users.user,
        products:state.products.products
     }
 }

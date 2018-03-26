@@ -38,7 +38,7 @@ class Cart extends Component {
 
                             <div key={product.product_id} className = 'cart-item'>
                                 <Link to = {`/description/${product.product_id}`}><p>{product.product_name}</p></Link>
-                                <p>Price:{product.price}</p>
+                                <p>Price: ${product.price}</p>
                                 <p>{product.quantity}</p>
                             </div>
                         ))
