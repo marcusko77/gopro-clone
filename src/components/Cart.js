@@ -48,7 +48,7 @@ class Cart extends Component {
                     </div>
                     <div className = 'bottom-cart'>
                    <h3>Subtotal: ${this.calculatetotal()}</h3>
-                   <Link to='checkout'>
+                   <Link to='/checkout'>
                     <div className = 'checkout'>
                    <button>Checkout</button>
                      </div>

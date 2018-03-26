@@ -4,6 +4,8 @@ import Navbar from './Navbar'
 import { getProducts } from '../ducks/products'
 import { addToCart } from '../ducks/cart'
 import { getUserInfo } from '../ducks/users'
+import { Link } from 'react-router-dom'
+import Cart from './Cart'
 import '../styles/main.scss'
 
  class Description extends Component {
